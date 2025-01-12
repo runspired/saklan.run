@@ -12,6 +12,10 @@ insert_final_newline = true
 indent_style = space
 indent_size = 2
 
+[CNAME]
+insert_final_newline = false
+
+
 [*.hbs]
 insert_final_newline = false
 
