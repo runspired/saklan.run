@@ -6,6 +6,23 @@ export default Route(
     {{pageTitle "saklan.run"}}
 
     <section class="page">
+      <nav>
+        <a href="https://saklan.run"><img
+            src="./assets/images/redwood.svg"
+            class="social-image-link"
+            alt="visit the saklan.run homepage"
+          /></a>
+        <a href="https://bsky.app/profile/saklan.run"><img
+            src="./assets/images/bluesky.svg"
+            class="social-image-link"
+            alt="visit @saklan.run on bluesky"
+          /></a>
+        <a href="https://github.com/runspired/saklan.run"><img
+            src="./assets/images/github-mark.svg"
+            class="social-image-link"
+            alt="visit Saklan.run on GitHub"
+          /></a>
+      </nav>
       <div class="frame">
         <div>
           <h2 id="title">The Saklan Endurance Run</h2>
