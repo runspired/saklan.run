@@ -1,1 +1,109 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@property --dark-grey {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(20, 24, 28);
+}
+
+@property --light-grey {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(236, 236, 236);
+}
+
+:root {
+  --theme-bg-main: #fff;
+  --theme-border-main: #f8f8f8;
+  --theme-text-main: #333;
+  --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-bg-main: #000;
+    --theme-border-main: #111;
+    --theme-text-main: #f0f0f0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root body.force-light-mode {
+    --theme-bg-main: #fff;
+    --theme-border-main: #f8f8f8;
+    --theme-text-main: #333;
+  }
+}
+
+:root body.force-dark-mode {
+  --theme-bg-main: #000;
+  --theme-border-main: #111;
+  --theme-text-main: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: var(--default-font);
+}
+
+body {
+  height: 100dvh;
+  font-size: 125%;
+  font-family: var(--default-font);
+  color: var(--theme-text-main);
+  background-color: var(--theme-bg-main);
+  transition: background-color 1s ease-out;
+}
+
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  position: relative;
+}
+
+.frame {
+  background: var(--theme-border-main);
+  width: 90%;
+  padding: 1rem;
+  margin: 0rem auto;
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+img.featured {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+  .frame {
+    max-width: 380px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 85%;
+  }
+  .frame {
+    max-width: 750px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 100%;
+  }
+}
