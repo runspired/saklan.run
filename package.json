@@ -2,10 +2,13 @@
   "name": "saklan-web",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for saklan-web goes here",
-  "repository": "",
-  "license": "MIT",
-  "author": "",
+  "description": "Website for the Saklan Endurance Run (https://saklan.run)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:runspired/saklan.run.git"
+  },
+  "license": "ALL RIGHTS RESERVED",
+  "author": "Chris Thoburn <runspired@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -102,8 +105,25 @@
     "vite": "^5.4.11"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">= 23.6.0",
+    "yarn": "use pnpm",
+    "npm": "use pnpm",
+    "pnpm": "9.15.3"
   },
+  "changelog": {
+    "labels": {
+      ":label: breaking": ":boom: Breaking Change",
+      ":label: feat": ":rocket: Enhancement",
+      ":label: bug": ":bug: Bug Fix",
+      ":label: perf:": ":zap: Performance",
+      ":label: cleanup": ":shower: Deprecation Removal",
+      ":label: deprecation": ":evergreen_tree: New Deprecation",
+      ":label: doc": ":memo: Documentation",
+      ":label: test": ":goal_net: Test",
+      ":label: chore": ":house: Internal"
+    }
+  },
+  "pnpm": {},
   "ember": {
     "edition": "octane"
   },
@@ -114,5 +134,10 @@
   "exports": {
     "./tests/*": "./tests/*",
     "./*": "./app/*"
+  },
+  "packageManager": "pnpm@9.15.3",
+  "volta": {
+    "node": "23.6.0",
+    "pnpm": "9.15.3"
   }
 }
